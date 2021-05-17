@@ -157,9 +157,10 @@ if __name__ == '__main__':
 		ship = move_ship(win, ship)
 		new_obs, integer_obs = update_obstacle(obstacles)
 
-		# If the coordinate of the ship overlap one of the new obstacles
-		# we draw the old obstacles. Otherwise, we draw the new obstacles.
-		# And break the while loop.
+		# Check collision:
+		# If the coordinate of the ship overlap one of the new obstacles,
+		# we draw the old obstacles. Otherwise, we draw the new obstacles 
+		# and break the while loop.
 		if ship in integer_obs:
 			draw_obs(win, obstacles)
 			break
